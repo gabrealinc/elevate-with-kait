@@ -46,7 +46,7 @@ export function Footer() {
             <span>Elevate with Kait</span>
           </Link>
           <a className="footer-email" href="mailto:kait@elevatewithkait.com">kait@elevatewithkait.com</a>
-          <a className="footer-social" href="https://instagram.com/elevate.withkait" target="_blank" rel="noreferrer" aria-label="Elevate with Kait on Instagram"><span className="instagram-icon" aria-hidden="true" />Instagram</a>
+          <a className="footer-social" href="https://www.instagram.com/elevate.withkait" target="_blank" rel="noreferrer" aria-label="Elevate with Kait on Instagram"><span className="instagram-icon" aria-hidden="true" />Instagram</a>
         </div>
         <div className="footer-links">
           {nav.map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}
