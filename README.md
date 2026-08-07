@@ -8,10 +8,10 @@ The official website for Elevate with Kait, built with Next.js and designed for 
 - Offers
 - Retreats
 - Weekly Classes
-- About Kait
+- About Kaitlyn
 - Contact and Booking
 
-Retreat information is pulled from Kait's public Google Sheet and refreshed every five minutes. Contact forms and scheduling areas are ready for GoHighLevel embeds when they become available.
+Retreat and weekly class information is pulled from Kaitlyn's public Google Sheet and refreshed every five minutes. Contact forms and scheduling areas are ready for GoHighLevel embeds when they become available.
 
 ## Local development
 
