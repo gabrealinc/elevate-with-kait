@@ -107,7 +107,7 @@ p { line-height: 1.75; }
 .section-heading p { font-size: 1rem; margin: 0; }
 .statement-media { display: grid; grid-template-columns: minmax(0, 2.2fr) minmax(240px, .8fr); gap: 1rem; align-items: stretch; }
 .statement-image { min-height: 620px; position: relative; border-radius: 28px; overflow: hidden; }
-.statement-image img { object-position: center 22%; }
+.statement-image img { object-position: center 48%; }
 .statement-card { border-radius: 28px; padding: 2rem; background: var(--mist); display: flex; flex-direction: column; justify-content: flex-end; min-height: 620px; }
 .statement-card img { align-self: center; margin: auto; }
 .statement-card p { font-family: var(--font-display); font-size: 1.35rem; line-height: 1.2; border-top: 1px solid var(--line); padding-top: 1rem; margin-bottom: 1rem; }

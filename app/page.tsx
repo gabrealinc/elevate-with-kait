@@ -70,8 +70,8 @@ export default function Home() {
           <div className="statement-media">
             <div className="statement-image">
               <Image
-                src="/images/kait-sound-desert-opt.jpg"
-                alt="Kaitlyn offering sound healing in the desert"
+                src="/images/kait-yoga-kneeling-opt.jpg"
+                alt="Kaitlyn practicing yoga beside the ocean"
                 fill
                 sizes="(max-width: 760px) 100vw, 62vw"
                 className="cover-image"
