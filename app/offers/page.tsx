@@ -7,7 +7,7 @@ const offers = [
   { id: "sound", num: "03", title: "Sound Healing", subtitle: "Let resonance carry what effort cannot.", text: "Crystal bowls and vibrational sound invite deep rest, energetic clearing, and integration. Sound healing is available as its own experience and is often woven through breathwork, gatherings, and retreats.", tags: ["Private", "Groups", "Events"] },
   { id: "movement", num: "04", title: "Yoga + Mindful Movement", subtitle: "Movement as listening, not performance.", text: "Kaitlyn’s classes weave mindful movement, breath, philosophy, and spiritual awareness. The practice centers presence, nervous system balance, and an honest relationship with the body you are in today.", tags: ["Weekly classes", "Private", "Retreats"] },
   { id: "mentorship", num: "05", title: "Spiritual Mentorship", subtitle: "Support for the threshold between who you were and who you’re becoming.", text: "A private, grounded container for self-inquiry, subconscious pattern work, brain-heart coherence, and embodied integration. The aim is not dependence on a guide, but deeper trust in your own guidance.", tags: ["1:1", "Integration", "Ongoing"] },
-  { id: "facilitation", num: "06", title: "Private Groups + Facilitation", subtitle: "Gatherings that become more than a moment on the calendar.", text: "Kaitlyn curates breathwork, sound, movement, ceremony, and connection for private groups, workshops, retreats, and community experiences. Each format is shaped around the people, purpose, and energy in the room.", tags: ["Custom", "Groups", "Retreats"] },
+  { id: "facilitation", num: "06", title: "Private Groups + Facilitation", subtitle: "Gatherings that become more than a moment on the calendar.", text: "Kaitlyn curates breathwork, sound, movement, ceremony, and connection for private group sessions, events, workshops, and retreats. Each experience is shaped around the people, purpose, and energy in the room.", tags: ["Custom", "Groups", "Events + Retreats"] },
 ];
 
 export const metadata = { title: "Offers", description: "Explore breathwork, Reiki, quantum energy work, sound healing, yoga, mentorship, and facilitation with Kaitlyn." };
@@ -25,7 +25,7 @@ export default function OffersPage() {
           <article className="offer-row" id={offer.id} key={offer.num}>
             <div className="offer-number">{offer.num}</div>
             <div><p className="eyebrow">{offer.subtitle}</p><h2>{offer.title}</h2></div>
-            <div className="offer-details"><p>{offer.text}</p><div className="tag-row">{offer.tags.map(tag => <span key={tag}>{tag}</span>)}</div></div>
+            <div className="offer-details"><p>{offer.text}</p><div className="tag-row">{offer.tags.map(tag => <span key={tag}>{tag}</span>)}</div>{offer.id === "facilitation" && <ArrowLink href="mailto:kait@elevatewithkait.com?subject=Private%20Group%20or%20Facilitation%20Inquiry" dark>Inquire about facilitation</ArrowLink>}</div>
           </article>
         ))}
       </section>
