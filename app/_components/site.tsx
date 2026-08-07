@@ -9,6 +9,8 @@ const nav = [
   ["About", "/about"],
 ] as const;
 
+export const BOOKING_URL = "https://links.gabrealinc.com/booking/MG7j5CM4CKZmn4eTUX3Z";
+
 export function Header() {
   return (
     <header className="site-header">
@@ -19,12 +21,12 @@ export function Header() {
       <nav className="desktop-nav" aria-label="Main navigation">
         {nav.map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}
       </nav>
-      <Link className="header-cta" href="/contact"><span>Book with Kaitlyn</span><b>↗</b></Link>
+      <Link className="header-cta" href={BOOKING_URL} target="_blank" rel="noreferrer"><span>Book with Kaitlyn</span><b>↗</b></Link>
       <details className="mobile-menu">
         <summary aria-label="Open navigation">Menu</summary>
         <div>
           {nav.map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}
-          <Link href="/contact">Book with Kaitlyn</Link>
+          <Link href={BOOKING_URL} target="_blank" rel="noreferrer">Book with Kaitlyn</Link>
         </div>
       </details>
     </header>
