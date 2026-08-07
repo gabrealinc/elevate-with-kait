@@ -1,6 +1,6 @@
 import { InnerHero, PageShell } from "../_components/site";
 
-export const metadata = { title: "Contact + Booking", description: "Connect with Kait to book a session, class, retreat, or private group experience." };
+export const metadata = { title: "Contact + Booking", description: "Connect with Kaitlyn to book a session, class, retreat, or private group experience." };
 
 export default function ContactPage() {
   return (
@@ -17,7 +17,7 @@ export default function ContactPage() {
         </div>
         <div className="embed-placeholder contact-embed" aria-label="Contact and booking form coming soon"><span>✦</span><p className="eyebrow">Start a conversation</p><h3>Contact + booking portal coming soon</h3><p>This space is ready for the GoHighLevel form and scheduling embed.</p></div>
       </section>
-      <section className="contact-close section-pad"><p>You don’t have to have the right words.</p><h2>Honesty is enough.<br />Curiosity is enough.<br />You are enough.</h2></section>
+      <section className="contact-close section-pad"><p>You don’t have to have the right words.</p><h2>Presence is enough.<br />Curiosity is enough.<br />You are enough.</h2></section>
     </main></PageShell>
   );
 }
