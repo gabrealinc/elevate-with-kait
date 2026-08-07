@@ -19,12 +19,12 @@ export function Header() {
       <nav className="desktop-nav" aria-label="Main navigation">
         {nav.map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}
       </nav>
-      <Link className="header-cta" href="/contact"><span>Book with Kait</span><b>↗</b></Link>
+      <Link className="header-cta" href="/contact"><span>Book with Kaitlyn</span><b>↗</b></Link>
       <details className="mobile-menu">
         <summary aria-label="Open navigation">Menu</summary>
         <div>
           {nav.map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}
-          <Link href="/contact">Book with Kait</Link>
+          <Link href="/contact">Book with Kaitlyn</Link>
         </div>
       </details>
     </header>
@@ -40,16 +40,20 @@ export function Footer() {
         <ArrowLink href="/contact" light>Start here</ArrowLink>
       </div>
       <div className="footer-bottom">
-        <Link className="brand footer-brand" href="/">
-          <Image src="/images/lotus-logo.png" alt="" width={54} height={54} />
-          <span>Elevate with Kait</span>
-        </Link>
+        <div className="footer-identity">
+          <Link className="brand footer-brand" href="/">
+            <Image src="/images/lotus-logo.png" alt="" width={54} height={54} />
+            <span>Elevate with Kait</span>
+          </Link>
+          <a className="footer-email" href="mailto:kait@elevatewithkait.com">kait@elevatewithkait.com</a>
+          <a className="footer-social" href="https://instagram.com/elevate.withkait" target="_blank" rel="noreferrer" aria-label="Elevate with Kait on Instagram"><span className="instagram-icon" aria-hidden="true" />Instagram</a>
+        </div>
         <div className="footer-links">
           {nav.map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}
           <Link href="/contact">Contact</Link>
         </div>
-        <p>Breathwork · Reiki · Energy · Sound · Yoga · Retreats</p>
-        <p className="copyright">© {new Date().getFullYear()} Elevate with Kait</p>
+        <p>Breathwork · Reiki · Quantum Healing · Sound · Yoga · Retreats</p>
+        <p className="copyright">© {new Date().getFullYear()} Copyright Elevate with Kait | Website by Gab Real Inc</p>
       </div>
     </footer>
   );
