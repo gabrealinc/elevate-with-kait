@@ -49,7 +49,7 @@ export default function Home() {
           <div className="hero-image-wrap">
             <Image
               src="/images/kait-sound-healing-opt.jpg"
-              alt="Kait holding a crystal singing bowl beside the ocean"
+              alt="Kaitlyn holding a crystal singing bowl beside the ocean"
               fill
               priority
               sizes="(max-width: 760px) 92vw, 58vw"
@@ -58,7 +58,7 @@ export default function Home() {
             <div className="hero-image-glow" />
           </div>
           <div className="floating-note note-left">Your breath already knows the way.</div>
-          <div className="floating-note note-right">San Diego · Worldwide retreats</div>
+          <div className="floating-note note-right">San Diego · International Retreats</div>
         </section>
 
         <section className="statement section-pad">
@@ -70,8 +70,8 @@ export default function Home() {
           <div className="statement-media">
             <div className="statement-image">
               <Image
-                src="/images/kait-retreat-opt.jpg"
-                alt="Kait smiling during a retreat gathering"
+                src="/images/kait-sound-desert-opt.jpg"
+                alt="Kaitlyn offering sound healing in the desert"
                 fill
                 sizes="(max-width: 760px) 100vw, 62vw"
                 className="cover-image"
@@ -92,7 +92,7 @@ export default function Home() {
             <h2>Not a menu of modalities.<br />A path back to you.</h2>
             <p>
               You do not have to know which healing practice to choose. Start
-              with how you want to feel, and Kait will help shape the way in.
+              with how you want to feel, and Kaitlyn will help shape the way in.
             </p>
           </div>
           <div className="pathway-grid">
@@ -111,7 +111,7 @@ export default function Home() {
         </section>
 
         <section className="practice-band">
-          <div className="marquee" aria-label="Kait's healing practices">
+          <div className="marquee" aria-label="Kaitlyn's healing practices">
             <div>
               Breathwork <span>✦</span> Reiki <span>✦</span> Sound Healing <span>✦</span>
               Yoga <span>✦</span> Quantum Energy <span>✦</span> Mentorship <span>✦</span>
@@ -125,7 +125,7 @@ export default function Home() {
             <p className="section-label light">Retreat beyond the familiar</p>
             <h2>Leave the rhythm you know. Meet the self underneath it.</h2>
             <p>
-              Kait’s destination retreats are intimate, elevated experiences
+              Kaitlyn’s destination retreats are intimate, elevated experiences
               where sacred practice, wild beauty, cultural discovery, and real
               human connection become one unfolding journey.
             </p>
@@ -135,7 +135,7 @@ export default function Home() {
             <div className="retreat-feature-image large">
               <Image
                 src="/images/kait-costa-rica-opt.jpg"
-                alt="Kait seated among lush tropical plants in Costa Rica"
+                alt="Kaitlyn seated among lush tropical plants in Costa Rica"
                 fill
                 sizes="(max-width: 760px) 90vw, 38vw"
                 className="cover-image"
@@ -143,8 +143,8 @@ export default function Home() {
             </div>
             <div className="retreat-feature-image small">
               <Image
-                src="/images/kait-portrait-opt.jpg"
-                alt="Portrait of Kait smiling"
+                src="/images/kait-yoga-warrior-opt.jpg"
+                alt="Kaitlyn practicing yoga beside the ocean"
                 fill
                 sizes="(max-width: 760px) 40vw, 18vw"
                 className="cover-image"
@@ -178,7 +178,7 @@ export default function Home() {
               holistic practice, and a grounded understanding of the nervous
               system.
             </p>
-            <ArrowLink href="/about" dark>Meet Kait</ArrowLink>
+            <ArrowLink href="/about" dark>Meet Kaitlyn</ArrowLink>
           </div>
         </section>
 
