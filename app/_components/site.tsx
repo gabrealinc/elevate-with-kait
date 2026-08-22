@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Script from "next/script";
 import type { ReactNode } from "react";
 
 const nav = [
@@ -39,6 +40,36 @@ export function Footer() {
         <h2>A softer way back<br />to your own center.</h2>
         <ArrowLink href="/contact" light>Start here</ArrowLink>
       </div>
+      <section className="footer-newsletter" aria-labelledby="newsletter-title">
+        <div className="footer-newsletter-copy">
+          <span className="footer-newsletter-star" aria-hidden="true">✦</span>
+          <p className="section-label light">Letters from Kaitlyn</p>
+          <h2 id="newsletter-title">Stay close to what is unfolding.</h2>
+          <p>Receive grounded reflections, new offerings, intimate gatherings, and first invitations to upcoming retreats.</p>
+          <small>Occasional notes, sent with intention. Unsubscribe anytime.</small>
+        </div>
+        <div className="footer-newsletter-form">
+          <iframe
+            src="https://links.gabrealinc.com/widget/form/sePUKE28VgXxg7B87kcv"
+            id="inline-sePUKE28VgXxg7B87kcv"
+            className="footer-newsletter-frame"
+            data-layout="{'id':'INLINE'}"
+            data-trigger-type="alwaysShow"
+            data-trigger-value=""
+            data-activation-type="alwaysActivated"
+            data-activation-value=""
+            data-deactivation-type="neverDeactivate"
+            data-deactivation-value=""
+            data-form-name="Subscribers"
+            data-height="434"
+            data-layout-iframe-id="inline-sePUKE28VgXxg7B87kcv"
+            data-form-id="sePUKE28VgXxg7B87kcv"
+            loading="lazy"
+            title="Subscribe to Kaitlyn's email list"
+          />
+          <Script src="https://links.gabrealinc.com/js/form_embed.js" strategy="lazyOnload" />
+        </div>
+      </section>
       <div className="footer-bottom">
         <div className="footer-identity">
           <Link className="brand footer-brand" href="/">
