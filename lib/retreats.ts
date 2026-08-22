@@ -16,8 +16,8 @@ const editorialFallbacks: Record<string, string> = {
 };
 
 const fallbackRetreats: Retreat[] = [
-  { date: "November 10–20, 2027", type: "Retreat", name: "Beyond The Eternal Sands", location: "Egypt", description: editorialFallbacks["Beyond The Eternal Sands"], url: "https://wetu.com/ItineraryOutputs/Discovery/0f907595-9e8c-42ba-bc49-c6ac3ab69bd7" },
   { date: "April 9–24, 2027", type: "Retreat", name: "Salt + Soul Retreat", location: "Costa Rica", description: editorialFallbacks["Salt + Soul Retreat"], url: "https://travelzenretreats.com/retreats/costa-rica-2027/" },
+  { date: "November 10–20, 2027", type: "Retreat", name: "Beyond The Eternal Sands", location: "Egypt", description: editorialFallbacks["Beyond The Eternal Sands"], url: "https://wetu.com/ItineraryOutputs/Discovery/0f907595-9e8c-42ba-bc49-c6ac3ab69bd7" },
 ];
 
 function parseCsv(text: string): string[][] {
@@ -45,10 +45,40 @@ function normalizeDate(value: string) {
   return value;
 }
 
+const monthIndex: Record<string, number> = {
+  January: 0,
+  February: 1,
+  March: 2,
+  April: 3,
+  May: 4,
+  June: 5,
+  July: 6,
+  August: 7,
+  September: 8,
+  October: 9,
+  November: 10,
+  December: 11,
+};
+
+function retreatStartTime(date: string) {
+  const match = date.match(/^([A-Za-z]+)\s+(\d{1,2}).*?(\d{4})$/);
+  if (!match) return Number.POSITIVE_INFINITY;
+
+  const [, month, day, year] = match;
+  const monthNumber = monthIndex[month];
+  return monthNumber === undefined
+    ? Number.POSITIVE_INFINITY
+    : Date.UTC(Number(year), monthNumber, Number(day));
+}
+
+function sortRetreats(retreats: Retreat[]) {
+  return [...retreats].sort((a, b) => retreatStartTime(a.date) - retreatStartTime(b.date));
+}
+
 export async function getRetreats(): Promise<Retreat[]> {
   try {
     const response = await fetch(SHEET_URL, { next: { revalidate: 300 } });
-    if (!response.ok) return fallbackRetreats;
+    if (!response.ok) return sortRetreats(fallbackRetreats);
     const rows = parseCsv(await response.text());
     const retreats = rows.slice(1).filter(row => row[1]?.toLowerCase() === "retreat" && row[2]).map(row => ({
       date: normalizeDate(row[0] || "Dates coming soon"),
@@ -58,8 +88,8 @@ export async function getRetreats(): Promise<Retreat[]> {
       description: row[4] || editorialFallbacks[row[2]] || "A thoughtfully held journey for restoration, connection, and embodied transformation.",
       url: row[5] || "/contact",
     }));
-    return retreats.length ? retreats : fallbackRetreats;
+    return sortRetreats(retreats.length ? retreats : fallbackRetreats);
   } catch {
-    return fallbackRetreats;
+    return sortRetreats(fallbackRetreats);
   }
 }
