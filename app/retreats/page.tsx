@@ -18,7 +18,7 @@ export default async function RetreatsPage() {
         {retreats.map((retreat, index) => (
           <article className="retreat-card" key={`${retreat.name}-${retreat.date}`}>
             <div className="retreat-card-image">
-              <Image src={retreat.location.toLowerCase().includes("egypt") ? "/images/egypt-pyramids-opt.jpg" : "/images/costa-rica-jungle-opt.jpg"} alt={retreat.location.toLowerCase().includes("egypt") ? "The Great Pyramids of Giza in Egypt" : "Lush Costa Rican rainforest"} fill sizes="(max-width: 760px) 100vw, 50vw" className="cover-image" />
+              <Image src={retreat.location.toLowerCase().includes("egypt") ? "/images/egypt-pyramids-opt.jpg" : "/images/costa-rica-jungle-opt.jpg"} alt={retreat.location.toLowerCase().includes("egypt") ? "The Great Pyramids of Giza in Egypt" : "Dominical beach on Costa Rica's Pacific coast"} fill sizes="(max-width: 760px) 100vw, 50vw" className="cover-image" />
               <span className="retreat-index">0{index + 1}</span>
             </div>
             <div className="retreat-card-copy">
