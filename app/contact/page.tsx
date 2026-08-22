@@ -18,7 +18,8 @@ export default function ContactPage() {
         </div>
         <div className="contact-embed" id="book" aria-label="Book a service with Kaitlyn">
           <div className="booking-intro"><span>✦</span><div><p className="eyebrow">Book with Kaitlyn</p><h3>Choose a time that feels aligned.</h3></div></div>
-          <iframe src="https://links.gabrealinc.com/booking/book-with-kaitlyn?heightMode=fixed&showHeader=true" allow="payment" className="booking-iframe" scrolling="no" id="MG7j5CM4CKZmn4eTUX3Z_1786139600700" title="Book a service with Kaitlyn" />
+          <iframe src="https://links.gabrealinc.com/booking/book-with-kaitlyn?heightMode=full&showHeader=false" allow="payment" className="booking-iframe" scrolling="no" id="MG7j5CM4CKZmn4eTUX3Z_1787362221116" title="Book a service with Kaitlyn" />
+          <p className="booking-fallback">Calendar not appearing? <a href="https://links.gabrealinc.com/booking/MG7j5CM4CKZmn4eTUX3Z" target="_blank" rel="noreferrer">Open the services calendar in a new window.</a></p>
           <Script src="https://links.gabrealinc.com/js/form_embed.js" strategy="afterInteractive" />
         </div>
       </section>
