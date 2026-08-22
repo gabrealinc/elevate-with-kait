@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { ArrowLink, InnerHero, PageShell } from "../_components/site";
 
-const MENTORSHIP_DISCOVERY_URL = "https://links.gabrealinc.com/widget/booking/MNEWAV51nyn7mifw3CBJ";
+const MENTORSHIP_DISCOVERY_URL = "/mentorship#book-mentorship";
 
 const offers = [
   { id: "regulate", num: "01", title: "Breathwork", subtitle: "Move beyond the mind and into the wisdom of the body.", text: "Kaitlyn’s 90-minute breathwork journeys are intentionally paced and deeply held. Guided conscious breathing may be woven with grounding, sound, visualization, gentle movement, rest, and integration.", tags: ["Private", "Small groups", "90 minutes"] },
@@ -27,7 +27,7 @@ export default function OffersPage() {
           <article className="offer-row" id={offer.id} key={offer.num}>
             <div className="offer-number">{offer.num}</div>
             <div><p className="eyebrow">{offer.subtitle}</p><h2>{offer.title}</h2></div>
-            <div className="offer-details"><p>{offer.text}</p><div className="tag-row">{offer.tags.map(tag => <span key={tag}>{tag}</span>)}</div>{offer.id === "mentorship" && <ArrowLink href={MENTORSHIP_DISCOVERY_URL} dark external>Book a discovery call</ArrowLink>}{offer.id === "facilitation" && <ArrowLink href="mailto:kait@elevatewithkait.com?subject=Private%20Group%20or%20Facilitation%20Inquiry" dark>Inquire about facilitation</ArrowLink>}</div>
+            <div className="offer-details"><p>{offer.text}</p><div className="tag-row">{offer.tags.map(tag => <span key={tag}>{tag}</span>)}</div>{offer.id === "mentorship" && <ArrowLink href={MENTORSHIP_DISCOVERY_URL} dark>Book a discovery call</ArrowLink>}{offer.id === "facilitation" && <ArrowLink href="mailto:kait@elevatewithkait.com?subject=Private%20Group%20or%20Facilitation%20Inquiry" dark>Inquire about facilitation</ArrowLink>}</div>
           </article>
         ))}
       </section>
