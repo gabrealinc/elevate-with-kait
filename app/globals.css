@@ -260,6 +260,10 @@ p { line-height: 1.75; }
 .booking-intro p { margin: 0 0 .25rem; }
 .booking-intro h3 { margin: 0; font-size: clamp(1.7rem, 2.5vw, 2.6rem); }
 .booking-iframe { display: block; width: 100%; min-height: 820px; border: 0; overflow: hidden; background: white; }
+.booking-page-section { display: flex; justify-content: center; }
+.booking-page-embed { width: min(100%, 980px); position: relative; top: auto; }
+.booking-fallback { margin: 0; padding: 1rem 1.5rem 1.25rem; text-align: center; font-size: .78rem; color: var(--blue); background: white; }
+.booking-fallback a { text-decoration: underline; text-underline-offset: 3px; }
 .contact-close { text-align: center; background: var(--mist); }
 .contact-close > p { font-family: var(--font-display); font-size: 1.4rem; color: var(--blue); }
 
